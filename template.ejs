@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><%= year %>年 <%= monthName %></title>
+	<style>
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		th, td {
+			border: 1px solid black;
+			text-align: center;
+			padding: 5px;
+		}
+		h1 {
+			text-align: center;
+		}
+		tbody > tr > td {
+			height:4em;
+			padding:0.5em;
+			vertical-align:top;
+			text-align:left;
+		}
+		tbody > tr > td:first-child {
+			color:red;
+		}
+		tbody > tr > td:nth-child(7) {
+			color:blue;
+		}
+		.holiday {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<h1><%= year %>年 <%= monthName %></h1>
+	<table>
+		<thead>
+			<tr>
+				<th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for (let week = 0; week < calendar.length; week++) { %>
+		    <tr>
+		    	<% for (let day = 0; day < 7; day++) { %>
+				<td><%= calendar[week][day] || '' %></td>
+				<% } %>
+		    </tr>
+			<% } %>
+		</tbody>
+	</table>
+</body>
+</html>
