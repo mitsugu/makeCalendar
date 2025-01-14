@@ -2,11 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title><%= year %>年 <%= monthName %></title>
+	<title><%= year %> <%= monthName %></title>
 	<style>
 		table {
 			width: 100%;
 			border-collapse: collapse;
+			table-layout: fixed;
 		}
 		th, td {
 			border: 1px solid black;
@@ -21,24 +22,29 @@
 			padding:0.5em;
 			vertical-align:top;
 			text-align:left;
+			font-weight:bold;
 		}
-		tbody > tr > td:first-child {
+		thead > tr > th:first-child, tbody > tr > td:first-child {
 			color:red;
 		}
-		tbody > tr > td:nth-child(7) {
+		thead > tr > th:nth-child(7), tbody > tr > td:nth-child(7) {
 			color:blue;
 		}
 		.holiday {
 			color:red;
 		}
+		div.center {
+			text-align:center;
+			margin-top:6em;
+		}
 	</style>
 </head>
 <body>
-	<h1><%= year %>年 <%= monthName %></h1>
+	<h1><%= year %> <%= monthName %></h1>
 	<table>
 		<thead>
 			<tr>
-				<th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th>
+				<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
 			</tr>
 		</thead>
 		<tbody>
