@@ -3,7 +3,9 @@ Create a monthly calendar for 2025.
 
 ## Install
 ```bash
-npm --save-dev gulp gulp-ejs through2 moment
+git clone https://github.com/mitsugu/makeCalendar.git
+cd makeCalendar
+npm --save-dev gulp@4 gulp-ejs gulp-rename moment
 ```
 
 ## Run
