@@ -1,61 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title><%= year %> <%= monthName %></title>
-	<style>
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			table-layout: fixed;
-		}
-		th, td {
-			border: 1px solid black;
-			text-align: center;
-			padding: 5px;
-		}
-		h1 {
-			text-align: center;
-		}
-		tbody > tr > td {
-			height:4em;
-			padding:0.5em;
-			vertical-align:top;
-			text-align:left;
-			font-weight:bold;
-		}
-		thead > tr > th:first-child, tbody > tr > td:first-child {
-			color:red;
-		}
-		thead > tr > th:nth-child(7), tbody > tr > td:nth-child(7) {
-			color:blue;
-		}
-		.holiday {
-			color:red;
-		}
-		div.center {
-			text-align:center;
-			margin-top:6em;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title><%= year %> <%= monthName %></title>
+	<link rel="stylesheet" href="../index.css" />
 </head>
 <body>
-	<h1><%= year %> <%= monthName %></h1>
-	<table>
-		<thead>
-			<tr>
-				<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% for (let week = 0; week < calendar.length; week++) { %>
-		    <tr>
-		    	<% for (let day = 0; day < 7; day++) { %>
-				<td><%= calendar[week][day] || '' %></td>
-				<% } %>
-		    </tr>
-			<% } %>
-		</tbody>
-	</table>
+    <h1><%= year %> <%= monthName %></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let week = 0; week < calendar.length; week++) { %>
+                <tr>
+                    <% for (let day = 0; day < 7; day++) { %>
+                        <td><%= calendar[week][day] || '' %></td>
+                    <% } %>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
 </body>
 </html>

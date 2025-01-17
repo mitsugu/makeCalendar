@@ -2,8 +2,7 @@ const gulp = require('gulp');
 const ejs = require('gulp-ejs');
 const through = require('through2');
 const moment = require('moment');
-const path = require('path'); // path モジュールを追加
-moment.locale('ja');
+const path = require('path');
 
 gulp.task('calendar', () => {
     const year = 2025;
@@ -35,7 +34,7 @@ gulp.task('calendar', () => {
                 const data = {
                     year: year,
                     month: month,
-                    monthName: firstDay.format('MMMM'),
+                    monthName: firstDay.format('MMMM'), 
                     calendar: calendar,
                 };
 
