@@ -1,8 +1,13 @@
 {
-  "devDependencies": {
-    "gulp": "^5.0.0",
-    "gulp-ejs": "^5.1.0",
-    "moment": "^2.30.1",
-    "through2": "^4.0.2"
-  }
+	"name": "makeCalendar",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "gulp"
+	},
+	"dependencies": {
+		"gulp": "^5.0.0",
+		"gulp-ejs": "^5.1.0",
+		"moment": "^2.30.1",
+		"through2": "^4.0.2"
+	}
 }

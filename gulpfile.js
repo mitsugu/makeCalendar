@@ -5,7 +5,7 @@ const moment = require('moment');
 const path = require('path');
 
 gulp.task('calendar', () => {
-    const year = 2027;
+    const year = 2026;
     const months = Array.from({ length: 12 }, (_, i) => i + 1);
 
     return gulp.src('template.ejs')
